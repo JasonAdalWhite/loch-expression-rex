@@ -1,7 +1,7 @@
 //Assignment Code + Event Listener to prompt questions when button pushed
 document.querySelector("#generate").addEventListener("click", writePassword);
 
-// Various Arrays 
+// Arrays for each character type
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -24,9 +24,6 @@ function generatePassword() {
       var confirmLength = (prompt("How many characters would you like your password to contain?"));
       } 
 
-      // Repeat back how many charactes the user will have  
-      alert(`Your password will have ${confirmLength} characters`);
-
     // Determine parameters of password 
     var confirmSpecialCharacter = confirm("Click OK to confirm if you would like to include special characters");
     var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
@@ -41,7 +38,7 @@ function generatePassword() {
         var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");   
     } 
 
-      // Assign an action to the password parameters NEED TO FIX THIS
+      // Assign an action to the password parameters
       var passwordCharacters = []
       
     if (confirmSpecialCharacter) {
